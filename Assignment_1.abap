@@ -1,3 +1,8 @@
+"Personalized hello world!
+"Write a code in ABAP so that it is possible to enter your own name that is then printed on the
+"output list (→ PARAMETERS). Example for output: Hello, <Own name>!
+----------------------------------------------------------------------------------------
+
 REPORT Z30923_712_ASS1_3.
 
 Data: name TYPE string.
@@ -7,6 +12,18 @@ Parameters: p_name TYPE string LOWER CASE DEFAULT 'Your Name'.
 name = p_name.
 
 Write: 'Hello', name, '!'.
+
+----------------------------------------------------------------------------------------
+
+"Time dependent greetings
+"Copy the report from Task (1.3.) into a new report.
+"Copy the report from Task (1.3.) into a new report. The program should be
+"modified so that a different greeting text is used depending on the time of day
+"(→ IF):
+"- Morning: "Good morning, <name>!"
+"- Afternoon: "Hello, <name>!"
+"- Evening: "Good evening, <name>!"
+"To do this, use a case distinction and the system field → SY-UZEIT
 
 ----------------------------------------------------------------------------------------
 
@@ -33,6 +50,19 @@ ELSE.    "Evening.
 Write: 'Good evening, ' && p_name && '!'.
 
 ENDIF.
+
+----------------------------------------------------------------------------------------
+
+"Pocket Calculator
+"Write an ABAP program that does the following:
+"- Input: two operands and one operator ("+", "-", "*", "/") (→ PARAMETERS)
+"- Processing: calculation of the result erg = operand1 "operator" operand2
+"- Output: Result as well as the input values, formatted in such a way that
+"it is clear what has been calculated.
+"The four basic arithmetic operations should be possible as operators. The
+"operands should be decimal numbers with 3 decimal places. Select a suitable
+"data type for this. The division by Zero should be handled with a suitable
+"message on the screen.
 
 ----------------------------------------------------------------------------------------
 
@@ -65,8 +95,6 @@ AT SELECTION-SCREEN. "Calculation screen
     WHEN 'ADD'.
       flag = 1.
       lv_out = Input1 + Input2.
-
-
 
     WHEN 'SUB'.
       flag = 1.
