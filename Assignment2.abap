@@ -1,3 +1,27 @@
+---------------------------------------------------------------------------------------------------------------------------
+
+Assignment 2.1 - Control Structures and Output
+"Implement a calculation table that allows one of the four basic
+"arithmetic calculations (+, -, /, * selected by the user) on the
+"numbers 0 through 10.
+"The output should be formatted as follows:
+"+ 0 1 2 ... 10
+"0 0 1 2 ... 10
+"1 1 2 3 ... 11
+"2 2 3 4 ... 12
+"... ... ... ... ... ...
+"10 10 11 12 ... 20
+"The selected operator should be printed in the first column and
+"first line, followed by the numbers from 0 to 10. The same applies
+"to the first column of all lines. The cells at the junctions should
+"contain the result of the operation. Use loops and the options for
+"formatted output of the WRITE command. Horizontal lines can be
+"created with the ULINE command, vertical lines with the pipe
+"character ("|") or via SY-VLINE. A division by zero should be done
+"by outputting a red "X" in the corresponding cell (COLOR).
+
+----------------------------------------------------------------------------------------------------------------------------
+
 REPORT z30923_712_ass2_1.
 
 DATA: initial_value TYPE p DECIMALS 2,
@@ -55,7 +79,16 @@ DO 12 TIMES.
 
   ENDDO.
 
+-------------------------------------------------------------------------------------------------------------------------------
 
+"Assignment 2.2. - Control Structures and Output
+"Create a report that calculates the checksum of a user-entered
+"sequence of digits and then prints it on the screen (use the
+"commands STRLEN and SHIFT).
+"Example of output:
+"The checksum of 12345 is 15
+
+----------------------------------------------------------------------------------------
 
 REPORT Z30923_712_ASS2_2.
 
@@ -82,6 +115,14 @@ DATA: in_str(10) TYPE C,
   ENDDO.
 WRITE: 'The checksum of', u_inp, ' is', checksum.
 
+----------------------------------------------------------------------------------------
+
+"Assignment 2.3. - Control Structures and Output
+"Write a report printing the first ten fibonacci numbers using a loop
+"(DO or WHILE). Fibonacci is defined as follows:
+"Fn = Fn−1 + Fn−2 with F0 = 0 and F1 = 1
+
+----------------------------------------------------------------------------------------
 
 REPORT z30923_712_ass2_3.
 
