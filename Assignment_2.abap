@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------------------------------
 
-Assignment 2.1 - Control Structures and Output
+"Assignment 2.1 - Control Structures and Output
 "Implement a calculation table that allows one of the four basic
 "arithmetic calculations (+, -, /, * selected by the user) on the
 "numbers 0 through 10.
